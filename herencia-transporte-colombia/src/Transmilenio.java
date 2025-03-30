@@ -1,23 +1,23 @@
 public class Transmilenio extends TransportePublico{
     int numeroDeParadas;
 
-    public Transmilenio(String tipo, String ruta, int numeroDeParadas) {
+    public Transmilenio(String tipo, Rutas ruta, int numeroDeParadas) {
         super(tipo, ruta);
         this.numeroDeParadas = numeroDeParadas;
     }
 
     @Override
-    public double calcularDistanciaRecorrida(Rutas rutas) {
-        return super.calcularDistanciaRecorrida(rutas);
+    public double calcularDistanciaRecorrida(Rutas ruta) {
+        return super.calcularDistanciaRecorrida(ruta);
     }
 
     @Override
-    public double calcularTiempoRecorrido(Rutas rutas) {
-        return super.calcularTiempoRecorrido(rutas);
+    public double calcularTiempoRecorrido(Rutas ruta) {
+        return super.calcularTiempoRecorrido(ruta);
     }
 
-    public double calcularTarifaTransmilenio(Rutas rutas) {
-        return tarifa = rutas.getDuracionRecorrido()*numeroDeParadas*55;
+    public double calcularTarifaTransmilenio(Rutas ruta) {
+        return tarifa = ruta.getDuracionRecorrido()*numeroDeParadas*55;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class Transmilenio extends TransportePublico{
         super.mostrarInformacion();
     }
 
-    public Transmilenio(String tipo, String ruta) {
+    public Transmilenio(String tipo, Rutas ruta) {
         super(tipo, ruta);
         System.out.println("numero de paradas: " + numeroDeParadas);
     }

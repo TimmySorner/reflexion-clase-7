@@ -1,12 +1,12 @@
 public class TransportePublico {
 
     protected String tipo;
-    protected String ruta;
+    private Rutas ruta;
     protected double tarifa;
     protected double distanciaRecorrida;
     protected int tiempoRecorrido;
 
-    public TransportePublico(String tipo, String ruta) {
+    public TransportePublico(String tipo, Rutas ruta) {
         this.tipo = tipo;
         this.ruta = ruta;
     }

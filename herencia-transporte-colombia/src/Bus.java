@@ -1,13 +1,13 @@
 public class Bus extends TransportePublico{
     private int capacidad;
 
-    public Bus(String tipo, String ruta) {
+    public Bus(String tipo, Rutas ruta) {
         super(tipo, ruta);
     }
 
     @Override
-    public double calcularDistanciaRecorrida(Rutas rutas) {
-        return super.calcularDistanciaRecorrida(rutas);
+    public double calcularDistanciaRecorrida(Rutas ruta) {
+        return super.calcularDistanciaRecorrida(ruta);
     }
 
     @Override
@@ -16,8 +16,8 @@ public class Bus extends TransportePublico{
     }
 
     @Override
-    public double calcularTiempoRecorrido(Rutas rutas) {
-        return super.calcularTiempoRecorrido(rutas);
+    public double calcularTiempoRecorrido(Rutas ruta) {
+        return super.calcularTiempoRecorrido(ruta);
     }
 
     @Override

@@ -1,23 +1,24 @@
 public class Metro extends TransportePublico{
     private int numeroEstaciones;
 
-    public Metro(String tipo, String ruta, int numeroEstaciones) {
+    public Metro(String tipo, Rutas ruta, int numeroEstaciones) {
         super(tipo, ruta);
         this.numeroEstaciones = numeroEstaciones;
+        
     }
 
     @Override
-    public double calcularDistanciaRecorrida(Rutas rutas) {
-        return super.calcularDistanciaRecorrida(rutas);
+    public double calcularDistanciaRecorrida(Rutas ruta) {
+        return super.calcularDistanciaRecorrida(ruta);
     }
 
-    public double calcularTarifaMetro(Rutas rutas) {
-        return tarifa = rutas.getDuracionRecorrido()*7000;
+    public double calcularTarifaMetro(Rutas ruta) {
+        return tarifa = ruta.getDuracionRecorrido()*7000;
     }
 
     @Override
-    public double calcularTiempoRecorrido(Rutas rutas) {
-        return super.calcularTiempoRecorrido(rutas);
+    public double calcularTiempoRecorrido(Rutas ruta) {
+        return super.calcularTiempoRecorrido(ruta);
     }
 
     @Override

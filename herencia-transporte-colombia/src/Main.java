@@ -4,6 +4,10 @@ public class Main {
     System.out.println(marinilla_medellin.getDuracionRecorrido());
     System.out.println(marinilla_medellin.getKilometroInicial());
     System.out.println(marinilla_medellin.getKilometroFinal());
+    Metro metroMedellin = new Metro("Transporte terrestre en metro", marinilla_medellin, 7);
+    metroMedellin.mostrarInformacion();
+    Bus busMedellin = new Bus("Transporte terrestre en bus", marinilla_medellin);
+    busMedellin.mostrarInformacion();
 
     }
 }
