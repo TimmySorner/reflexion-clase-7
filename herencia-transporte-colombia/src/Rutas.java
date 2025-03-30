@@ -1,40 +1,35 @@
 public class Rutas {
-    private float kilometroInicial;
-    private float kilometroFinal;
+    private double kilometroInicial;
+    private double kilometroFinal;
+    private int duracionRecorrido;
 
-    public Rutas( float kilometroInicial,float kilometroFinal) {
-        this.kilometroInicial = kilometroInicial;
+    public Rutas(int duracionRecorrido, double kilometroFinal, double kilometroInicial) {
+        this.duracionRecorrido = duracionRecorrido;
         this.kilometroFinal = kilometroFinal;
+        this.kilometroInicial = kilometroInicial;
     }
 
-    public float getKilometroFinal() {
+    public double getDuracionRecorrido() {
+        return duracionRecorrido;
+    }
+
+    public void setDuracionRecorrido(int duracionRecorrido) {
+        this.duracionRecorrido = duracionRecorrido;
+    }
+
+    public double getKilometroFinal() {
         return kilometroFinal;
     }
 
-    public void setKilometroFinal(float kilometroFinal) {
+    public void setKilometroFinal(double kilometroFinal) {
         this.kilometroFinal = kilometroFinal;
     }
 
-    public float getKilometroInicial() {
+    public double getKilometroInicial() {
         return kilometroInicial;
     }
 
-    public void setKilometroInicial(float kilometroInicial) {
+    public void setKilometroInicial(double kilometroInicial) {
         this.kilometroInicial = kilometroInicial;
-    }
-
-    public float intervaloKilometraje(){
-        if(kilometroInicial > kilometroFinal){
-            return kilometroInicial-kilometroFinal;
-        } else {
-            return kilometroFinal-kilometroInicial;
-        }
-
-    }
-
-    public void mostrarKilometaje(){
-        System.out.println("Kilometro Inicial: " + kilometroInicial);
-        System.out.println("Kilometro Final: " + kilometroFinal);
-        System.out.println("Rango kilometro: " + intervaloKilometraje());
     }
 }

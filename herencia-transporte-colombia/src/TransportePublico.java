@@ -6,41 +6,28 @@ public class TransportePublico {
     protected double distanciaRecorrida;
     protected int tiempoRecorrido;
 
-    public TransportePublico(double distanciaRecorrida, String ruta, double tarifa, int tiempoRecorrido, String tipo) {
-        this.distanciaRecorrida = distanciaRecorrida;
-        this.ruta = ruta;
-        this.tarifa = tarifa;
-        this.tiempoRecorrido = tiempoRecorrido;
+    public TransportePublico(String tipo, String ruta) {
         this.tipo = tipo;
+        this.ruta = ruta;
     }
 
-    public TransportePublico() {
-        this.distanciaRecorrida = 0;
-        this.ruta = "Movimiento generico";
-        this.tarifa = 0;
-        this.tiempoRecorrido = 0;
-        this.tipo = "Transporte generico";
-
+    public double calcularDistanciaRecorrida(Rutas rutas) {
+        return distanciaRecorrida = (rutas.getKilometroInicial()>rutas.getKilometroFinal()) ?rutas.getKilometroInicial() - rutas.getKilometroFinal():rutas.getKilometroFinal() - rutas.getKilometroInicial() ;
     }
 
-    public void calcularTarifa() {
-    tarifa = distanciaRecorrida * tarifa;
+    public double calcularTiempoRecorrido(Rutas rutas) {
+        return tiempoRecorrido = (int) rutas.getDuracionRecorrido();
     }
 
-    public void calcularDistanciaRecorrida() {
-    distanciaRecorrida = distanciaRecorrida;
+    public double calcularTarifa() {
+        return tarifa = distanciaRecorrida*tiempoRecorrido;
     }
-
-    public void calcularTiempoRecorrido() {
-
-    }
-    public void informacionTiquete() {
+    public void mostrarInformacion() {
         System.out.println("Tipo: " + tipo);
         System.out.println("Ruta: " + ruta);
         System.out.println("Tarifa: " + tarifa);
         System.out.println("Distancia recorrida: " + distanciaRecorrida);
         System.out.println("Tiempo recorrido: " + tiempoRecorrido);
+        System.out.println("---INFORMACION ESPECIAL---");
     }
-
-
 }

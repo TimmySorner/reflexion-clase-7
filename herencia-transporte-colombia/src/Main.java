@@ -1,12 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("---PRIMER TRAYECTO---");
-        Rutas marinilla = new Rutas(125,245);
-        marinilla.mostrarKilometaje();
-        System.out.println("---SEGUNDO TRAYECTO---");
-        Rutas bogota_medellin = new Rutas(245,125);
-        bogota_medellin.mostrarKilometaje();
-        System.out.println("---VALOR PASAJES---");
+    Rutas marinilla_medellin = new Rutas(200,400,7);
+    System.out.println(marinilla_medellin.getDuracionRecorrido());
+    System.out.println(marinilla_medellin.getKilometroInicial());
+    System.out.println(marinilla_medellin.getKilometroFinal());
 
     }
 }

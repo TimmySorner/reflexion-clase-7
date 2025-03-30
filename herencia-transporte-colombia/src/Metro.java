@@ -1,8 +1,9 @@
-public class Bus extends TransportePublico{
-    private int capacidad;
+public class Metro extends TransportePublico{
+    private int numeroEstaciones;
 
-    public Bus(String tipo, String ruta) {
+    public Metro(String tipo, String ruta, int numeroEstaciones) {
         super(tipo, ruta);
+        this.numeroEstaciones = numeroEstaciones;
     }
 
     @Override
@@ -10,9 +11,8 @@ public class Bus extends TransportePublico{
         return super.calcularDistanciaRecorrida(rutas);
     }
 
-    @Override
-    public double calcularTarifa() {
-        return super.calcularTarifa()*30;
+    public double calcularTarifaMetro(Rutas rutas) {
+        return tarifa = rutas.getDuracionRecorrido()*7000;
     }
 
     @Override
@@ -23,6 +23,6 @@ public class Bus extends TransportePublico{
     @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();
-        System.out.println("Capacidad: " + capacidad);
+        System.out.println("Numero Estaciones: " + numeroEstaciones);
     }
 }
